@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import SearchIcon from "@material-ui/icons/Search";
+import WeatherContext from "../context/weatherContext";
 
 function Header({ temp, location }) {
   const [zipCode, setZipCode] = useState("");
+  const { data } = useContext(WeatherContext);
+  console.log(data);
 
   return (
     <header>
@@ -40,8 +43,8 @@ function Header({ temp, location }) {
           </div>
 
           <div className="flex mt-1 ml-1 text-white">
-            <p className="">{temp}°</p>
-            <p className="font-bold ml-2">{location}</p>
+            <p className="">{((data.main.temp * 9) / 5 + 32).toFixed(0)}°</p>
+            <p className="font-bold ml-2">{data.name}</p>
           </div>
         </div>
       </div>
