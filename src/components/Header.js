@@ -3,7 +3,6 @@ import SearchIcon from "@material-ui/icons/Search";
 
 function Header({ temp, location }) {
   const [zipCode, setZipCode] = useState("");
-  console.log("zip code", zipCode);
 
   return (
     <header>

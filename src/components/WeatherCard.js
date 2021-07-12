@@ -26,7 +26,7 @@ function WeatherCard({
             <p className="my-auto mt-3 text-lg font-bold">
               {minTemp}° / {maxTemp}°
             </p>
-            <p>Feels like: {feelsLike}</p>
+            <p>Feels like: {feelsLike}°</p>
           </div>
         </div>
       </div>
