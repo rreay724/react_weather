@@ -1,7 +1,5 @@
 import "./App.css";
-import { Header, Body } from "./components/index";
-import WeatherContext from "./context/weatherContext";
-// import Weather from "./hooks/weather";
+import { Header, Body, Loading } from "./components/index";
 import React, { useState, useEffect } from "react";
 
 function App() {
@@ -40,7 +38,9 @@ function App() {
           <Body data={data} />
         </>
       ) : (
-        <div></div>
+        <div>
+          <Loading />
+        </div>
       )}
     </div>
   );
