@@ -8,7 +8,7 @@ function Header({ data }) {
   return (
     <header>
       <div className="bg-blue-500 h-20 border-gray-500">
-        <div className="container mx-auto h-full">
+        <div className="container px-5 md:mx-auto h-full">
           <div className="flex justify-between h-full">
             <div className="mt-6 text-white">
               <h1>Weather</h1>
@@ -33,10 +33,14 @@ function Header({ data }) {
       </div>
       <div className="bg-blue-300 h-8">
         <div className="ml-16 flex">
-          <div className="mt-2 flex">
+          <div className="flex">
             <img
-              className="h-4 w-4"
-              src="https://i.pinimg.com/originals/6f/4a/df/6f4adf551b05fda7db635aecddd560a0.png"
+              className="h-8 w-8"
+              src={
+                "http://openweathermap.org/img/w/" +
+                data.weather[0].icon +
+                ".png"
+              }
             />
           </div>
 

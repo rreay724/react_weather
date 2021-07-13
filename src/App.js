@@ -33,7 +33,7 @@ function App() {
     console.log(data);
   }, [lat, long]);
   return (
-    <div>
+    <div className="bg-gradient-to-b from-green-700 to-red-200 min-h-screen">
       {typeof data.main != "undefined" ? (
         <>
           <Header data={data} />
