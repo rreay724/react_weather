@@ -2,10 +2,8 @@ import React, { useState, useContext } from "react";
 import SearchIcon from "@material-ui/icons/Search";
 import WeatherContext from "../context/weatherContext";
 
-function Header({ temp, location }) {
+function Header({ data }) {
   const [zipCode, setZipCode] = useState("");
-  const { data } = useContext(WeatherContext);
-  console.log(data);
 
   return (
     <header>

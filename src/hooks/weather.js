@@ -24,8 +24,8 @@ function Weather() {
           console.log("Result is:", result);
         });
     };
-
     fetchData();
+
     console.log(data);
   }, [lat, long]);
 

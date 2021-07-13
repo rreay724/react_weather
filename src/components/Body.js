@@ -2,10 +2,10 @@ import React, { useState, useEffect, useContext } from "react";
 import { WeatherCard } from "../components/index";
 import WeatherContext from "../context/weatherContext";
 
-export default function Body() {
-  const { data } = useContext(WeatherContext);
+export default function Body({ data }) {
+  // const { data } = useContext(WeatherContext);
 
-  console.log("Data", data);
+  // console.log("Data", data);
 
   return (
     <div>
