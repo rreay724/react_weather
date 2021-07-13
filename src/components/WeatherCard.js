@@ -15,16 +15,15 @@ function WeatherCard({
       <div className="p-3 my-auto mx-auto text-left">
         <p>{location}</p>
         <p className=" text-5xl">{temp} °F</p>
-
         <p className="font-bold">{weather}</p>
         <p>Humidity: {humidity}%</p>
       </div>
-      <div className=" mx-auto">
+      <div className="mx-auto text-center">
         <img className="h-28 w-28" src={icon} />
-        <p className="text-center text-lg font-bold">
-          {minTemp}° / {maxTemp}°
+        <p className="text-lg font-bold">
+          {maxTemp}° / {minTemp}°
         </p>
-        <p className="text-center">Feels like: {feelsLike}°</p>
+        <p>Feels like: {feelsLike}°</p>
       </div>
     </div>
   );

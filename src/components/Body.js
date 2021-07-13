@@ -1,6 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
 import { WeatherCard } from "../components/index";
-import WeatherContext from "../context/weatherContext";
 
 export default function Body({ data }) {
   // const { data } = useContext(WeatherContext);
