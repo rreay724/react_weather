@@ -36,7 +36,7 @@ function WeatherSearchPage() {
               data.list[0]?.weather[0].icon +
               ".png"
             }
-            location={data.name}
+            location={data.city.name}
           />
           <p>{data.city.name}</p>
           <p>{data.list[0]?.weather[0]?.description}</p>

@@ -17,14 +17,14 @@ function Header({ location, temp, icon, data }) {
   return (
     <header>
       <div className="bg-blue-500 h-20 border-gray-500">
-        <div className="container px-5 md:mx-auto h-full">
-          <div className="flex justify-between h-full">
+        <div className="container  md:mx-auto h-full">
+          <div className="flex justify-between h-full px-2 md:px-0">
             <div className="mt-6 text-white">
               <Link to={ROUTES.MAIN_PAGE}>
                 <h1>Weather</h1>
               </Link>
             </div>
-            <div className="items-center align-items text-center mt-6 rounded-full w-72 h-8 bg-blue-700">
+            <div className="items-center align-items text-center mt-6 rounded-full w-52 md:w-72 h-8 bg-blue-700">
               <form onSubmit={handleSearch}>
                 <div className="mt-1 text-white">
                   <input
@@ -34,7 +34,7 @@ function Header({ location, temp, icon, data }) {
                     type="text"
                     onChange={({ target }) => setZipCode(target.value)}
                   />
-                  <SearchIcon className="ml-16" />
+                  <SearchIcon className="md:ml-16" />
                 </div>
               </form>
             </div>
@@ -45,7 +45,7 @@ function Header({ location, temp, icon, data }) {
         </div>
       </div>
       <div className="bg-blue-300 h-8">
-        <div className="ml-16 flex">
+        <div className="ml-4 flex">
           {data ? (
             <div className="flex">
               <img className="h-8 w-8" src={icon} />
