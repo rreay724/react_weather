@@ -64,8 +64,11 @@ function Main() {
             <Skeleton
               count={1}
               height={250}
-              className=" border-black w-250 md:w-6/12 mt-10 py-3 rounded-lg shadow-xl"
+              className=" border-black w-250 md:w-6/12 mt-10 py-3 rounded-lg shadow-xl opacity-50"
             />
+            <p className="text-white text-xl font-bold mt-10 text-center animate-pulse">
+              Retrieving current location...
+            </p>
           </div>
         </div>
       )}
