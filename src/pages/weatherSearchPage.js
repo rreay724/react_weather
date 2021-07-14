@@ -67,34 +67,6 @@ function WeatherSearchPage() {
         </div>
       )}
     </div>
-    // <div>
-    //   {data != "" ? (
-    //     <div>
-    //       <Header
-    //         data={data}
-    //         temp={(((data.list[0]?.main.temp - 273.15) * 9) / 5 + 32).toFixed(
-    //           0
-    //         )}
-    //         icon={
-    //           "http://openweathermap.org/img/w/" +
-    //           data.list[0]?.weather[0].icon +
-    //           ".png"
-    //         }
-    //         location={data.city.name}
-    //       />
-    //       <p>{data.city.name}</p>
-    //       <p>{data.list[0]?.weather[0]?.description}</p>
-    //       <p>
-    //         {(((data.list[0]?.main.temp - 273.15) * 9) / 5 + 32).toFixed(0)}
-    //       </p>
-    //     </div>
-    //   ) : (
-    //     <div>
-    //       <Header />
-    //       <Loading />
-    //     </div>
-    //   )}
-    // </div>
   );
 }
 

@@ -52,7 +52,7 @@ export default function Body({ data, forecastData }) {
           visibility={(data.visibility / 1609).toFixed(0)}
         />
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 p-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 p-4">
         {forecastData.list.map((item) => (
           <ForecastWeatherCard
             date={convertTimestampDate(item.dt)}
