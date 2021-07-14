@@ -21,7 +21,7 @@ function Main() {
 
       // call current weather
       await fetch(
-        `https://api.openweathermap.org/data/2.5/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`
+        `https://api.openweathermap.org/data/2.5/weather/?lat=${lat}&lon=${long}&units=imperial&APPID=${process.env.REACT_APP_API_KEY}`
       )
         .then((res) => res.json())
         .then((result) => {
@@ -31,7 +31,7 @@ function Main() {
 
       //call forecast weather
       await fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${process.env.REACT_APP_API_KEY}`
+        `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&units=imperial&appid=${process.env.REACT_APP_API_KEY}`
       )
         .then((forecastRes) => forecastRes.json())
         .then((forecastResult) => {
@@ -49,7 +49,7 @@ function Main() {
         <>
           <Header
             data={data}
-            temp={((data.main.temp * 9) / 5 + 32).toFixed(0)}
+            temp={data.main.temp.toFixed(0)}
             icon={
               "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
             }

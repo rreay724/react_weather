@@ -18,7 +18,7 @@ function WeatherCard({
       <div className="p-3 my-auto mx-auto text-left">
         <p>{location}</p>
         <p className=" text-5xl">{temp} °F</p>
-        <p>As of: {moment().format("h:mm a")}</p>
+        <p className="text-sm">As of: {moment().format("h:mm a")}</p>
         <p className="font-bold">{weather}</p>
         <p>Humidity: {humidity}%</p>
         <p>Wind speed: {windSpeed} mph</p>
