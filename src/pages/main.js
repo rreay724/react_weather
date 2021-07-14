@@ -1,6 +1,7 @@
 import { Header, Body } from "../components/index";
 import React, { useState, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
+import Geolocation from "@react-native-community/geolocation";
 
 function Main() {
   const [lat, setLat] = useState([]);
@@ -10,9 +11,9 @@ function Main() {
 
   useEffect(() => {
     const fetchData = async () => {
-      navigator.geolocation.getCurrentPosition(function (position) {
-        setLat(position.coords.latitude);
-        setLong(position.coords.longitude);
+      Geolocation.getCurrentPosition((info) => {
+        setLat(info.coords.latitude);
+        setLong(info.coords.longitude);
       });
 
       console.log("Latitude is:", lat);
