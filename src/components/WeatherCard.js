@@ -14,7 +14,7 @@ function WeatherCard({
   visibility,
 }) {
   return (
-    <div className="flex leading-7 h-66 border border-black w-11/12 md:w-6/12 mx-auto mt-10 py-3 rounded-lg bg-gradient-to-b from-blue-700 to-blue-200 text-white shadow-xl">
+    <div className="flex leading-7 h-66 border border-black w-11/12 md:w-6/12 mx-auto my-10 py-3 rounded-lg bg-gradient-to-b from-blue-700 to-blue-200 text-white shadow-xl">
       <div className="p-3 my-auto mx-auto text-left">
         <p>{location}</p>
         <p className=" text-5xl">{temp} °F</p>

@@ -44,7 +44,7 @@ function Main() {
     console.log(data);
   }, [lat, long]);
   return (
-    <div className="bg-gradient-to-b from-green-700 to-red-200 min-h-screen">
+    <div className="bg-gradient-to-b from-green-700 to-green-200 min-h-screen">
       {typeof data.main != "undefined" && forecastData.cod == "200" ? (
         <>
           <Header
